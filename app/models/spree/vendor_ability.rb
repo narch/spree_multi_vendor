@@ -5,6 +5,7 @@ class Spree::VendorAbility
     @vendor_ids = user.vendors.active.ids
 
     if @vendor_ids.any?
+      apply_stock_places_permissions
       apply_classifications_permissions
       apply_order_permissions
       apply_image_permissions
@@ -88,6 +89,10 @@ class Spree::VendorAbility
 
   def apply_stock_permissions
     can :admin, Spree::Stock
+  end
+  
+  def apply_stock_places_permissions
+    can :admin, Spree::StockPlace
   end
 
   def apply_stock_item_permissions
