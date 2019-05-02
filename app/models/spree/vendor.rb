@@ -58,7 +58,7 @@ module Spree
     private
 
     def create_stock_location
-      stock_locations.create(name: name, country: Spree::Country.default, propagate_all_variants: false)
+      stock_locations.create(name: name, country: Spree::Country.default, propagate_all_variants: 0)
       #stock_locations.where(name: name, country: Spree::Country.default).first_or_create!
     end
 
