@@ -6,6 +6,7 @@ Spree::Admin::UsersController.class_eval do
                                  [spree_role_ids: [],
                                   vendor_ids: [],
                                   taxonomy_ids: [],
+                                  permission_ids: [],
                                   ship_address_attributes: permitted_address_attributes,
                                   bill_address_attributes: permitted_address_attributes])
   end
